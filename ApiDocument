@@ -1,0 +1,35 @@
+Authentication: JWT
+Headers:
+	Authorization: JWT <access-token>
+
+Get Users List:
+	method: Get
+	url:	http://localhost:8000/user/
+
+Create User:
+	method: Post
+	url: 	http://localhost:8000/user/
+	payload: {"username": "user", "name": "name", "password": "pass", "email":"email"}
+
+Create Book:
+	method: Post
+	url:	http://localhost:8000/books/
+	payload: {"book_name": "name", "book_count":"10", "author":"name"}
+
+Book List:
+	method: Get
+        url:    http://localhost:8000/books/
+
+Get Book by id:
+	method: Get
+        url:    http://localhost:8000/books/{id}/get-book
+
+Borrow Book:
+	method: Get
+        url:    http://localhost:8000/books/{id}/borrow-book
+
+Get Book Borrowed by user:
+	method: Get
+        url:    http://localhost:8000/books/user-borrow-book
+
+
